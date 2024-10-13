@@ -6,149 +6,19 @@
   <div class="col-3"></div>
   <div class="col-9">
     <div class="row">
-      <div class="col-3">
+      <div class="col-3" *ngFor="let menu of menuList">
         <div class="card">
           <div class="text-center">
             <img
-              src="assets/images/user.jpg"
+              [src]="menu.menu_image_path + '/' + menu.menu_image"
               class="rounded"
               style="width: 100px"
             />
           </div>
           <div class="card-body">
-            <div class="card-title h5">ทดสอบ ทดสอบ</div>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card">
-          <div class="text-center">
-            <img
-              src="assets/images/user.jpg"
-              class="rounded"
-              style="width: 100px"
-            />
-          </div>
-          <div class="card-body">
-            <div class="card-title h5">ทดสอบ ทดสอบ</div>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card">
-          <div class="text-center">
-            <img
-              src="assets/images/user.jpg"
-              class="rounded"
-              style="width: 100px"
-            />
-          </div>
-          <div class="card-body">
-            <div class="card-title h5">ทดสอบ ทดสอบ</div>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card">
-          <div class="text-center">
-            <img
-              src="assets/images/user.jpg"
-              class="rounded"
-              style="width: 100px"
-            />
-          </div>
-          <div class="card-body">
-            <div class="card-title h5">ทดสอบ ทดสอบ</div>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row mt-4">
-      <div class="col-3">
-        <div class="card">
-          <div class="text-center">
-            <img
-              src="assets/images/user.jpg"
-              class="rounded"
-              style="width: 100px"
-            />
-          </div>
-          <div class="card-body">
-            <div class="card-title h5">ทดสอบ ทดสอบ</div>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card">
-          <div class="text-center">
-            <img
-              src="assets/images/user.jpg"
-              class="rounded"
-              style="width: 100px"
-            />
-          </div>
-          <div class="card-body">
-            <div class="card-title h5">ทดสอบ ทดสอบ</div>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card">
-          <div class="text-center">
-            <img
-              src="assets/images/user.jpg"
-              class="rounded"
-              style="width: 100px"
-            />
-          </div>
-          <div class="card-body">
-            <div class="card-title h5">ทดสอบ ทดสอบ</div>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card">
-          <div class="text-center">
-            <img
-              src="assets/images/user.jpg"
-              class="rounded"
-              style="width: 100px"
-            />
-          </div>
-          <div class="card-body">
-            <div class="card-title h5">ทดสอบ ทดสอบ</div>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
+            <div class="card-title h5">{{ menu.name }}</div>
+            <p class="card-text">{{ menu.description }}</p>
+            <p class="card-text">ราคา: {{ menu.price }} บาท</p>
           </div>
         </div>
       </div>

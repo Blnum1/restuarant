@@ -27,4 +27,16 @@ export class MenuService {
         })
       );
   }
+
+  addMenu(menuData: FormData) {
+    return this.http.post(`${this.url}/addMenu`, menuData);
+  }
+
+  updateMenu(id: number, menuData: FormData) {
+    return this.http.put(`${this.url}/updateMenu/${id}`, menuData);
+  }
+
+  deleteMenu(id: number) {
+    return this.http.delete(`${this.url}/deleteMenu/${id}`);
+  }
 }
